@@ -8,7 +8,9 @@ type HomeProps = {
 const Home: NextPage<HomeProps> = ({ drafts }) => {
 
   return (
-    <div></div>
+    <div className="min-h-screen bg-blue-500">
+
+    </div>
   );
 };
 
