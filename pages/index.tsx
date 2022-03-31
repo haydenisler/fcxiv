@@ -6,10 +6,18 @@ type HomeProps = {
 };
 
 const Home: NextPage<HomeProps> = ({ drafts }) => {
-
   return (
-    <div className="min-h-screen bg-blue-500">
-
+    <div className="min-h-screen p-8">
+      <div className="grid grid-cols-3 gap-4">
+        {Reflect.ownKeys(drafts).map((key) => {
+          return (
+            <div key={String(key)} className="border border-gray-300 rounded p-4">
+              <h1>{drafts[String(key)].name}</h1>
+              <p>{drafts[String(key)].craftType}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -46,6 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const value = {
       id: current['ID'],
       name: current['Name'],
+      craftType: current['CompanyCraftDraftCategoryTargetID'],
       requiredItems: {
         '0': {
           id: current['RequiredItem0TargetID'] ?? null,
