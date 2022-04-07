@@ -1,3 +1,18 @@
+import type { NextPage } from 'next';
+import { useState } from 'react';
+import { supabase } from '../config/supabase.config';
+
+const Home: NextPage = () => {
+  
+
+  return (
+    <div className="flex flex-col items-center justify-center p-4">
+      
+    </div>
+  );
+}
+
+/* 
 import type { NextPage, GetStaticProps } from 'next';
 import PQueue from 'p-queue';
 
@@ -11,7 +26,7 @@ const Home: NextPage<HomeProps> = ({ drafts }) => {
       <div className="grid grid-cols-1 gap-4">
         {Reflect.ownKeys(drafts).map((key) => {
           return (
-            <div key={String(key)} className="border border-gray-300 rounded p-4">
+            <div key={String(key)} className="p-4 border border-gray-300 rounded">
               <h1>{drafts[String(key)].name}</h1>
               <p>{drafts[String(key)].craftType}</p>
             </div>
@@ -21,6 +36,7 @@ const Home: NextPage<HomeProps> = ({ drafts }) => {
     </div>
   );
 };
+
 
 export const getStaticProps: GetStaticProps = async () => {
   const baseUrl = 'https://xivapi.com';
@@ -86,5 +102,6 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   };
 }
+*/
 
 export default Home;
