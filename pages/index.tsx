@@ -8,7 +8,7 @@ type HomeProps = {
 const Home: NextPage<HomeProps> = ({ drafts }) => {
   return (
     <div className="min-h-screen p-8">
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4">
         {Reflect.ownKeys(drafts).map((key) => {
           return (
             <div key={String(key)} className="border border-gray-300 rounded p-4">
